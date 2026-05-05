@@ -36,6 +36,5 @@ form.addEventListener("submit", event => {
                 position: "topRight",
             });
         });
-    
-    form.requestFullscreen();
+    form.reset();
 });
