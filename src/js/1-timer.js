@@ -24,21 +24,20 @@ const options = {
     defaultDate: new Date(),
     minuteIncrement: 1,
     onClose(selectedDates) {
-        const userSelectedDate = selectedDates[0];
+        userSelectedDate = selectedDates[0];
   
 
-        if (selectedDate <= new Date()) {
+        if (userSelectedDate <= new Date()) {
             iziToast.error({
                 message: "Please choose a date in the future",
                 position: "topRight",
             });
 
             refs.startBtn.disabled = true;
-            userSelectedDate = null;
             return;
         }
 
-        userSelectedDate = selectedDate;
+        
         refs.startBtn.disabled = false;
     },
 };
